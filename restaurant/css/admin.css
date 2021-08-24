@@ -1,0 +1,126 @@
+/*
+ Aauthor : Adarsh Negi; 
+ Theam : Restaurant;
+ version : 1.0;
+*/
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+.wrapper{
+    padding: 2%;
+    margin: 0 4%;
+    width: 70%;
+}
+.clear{
+    float: none;
+    clear: both;
+}
+.text-center{
+    text-align: center;
+}
+.menu{
+    border-bottom:2px solid olive;
+}
+.menu ul{
+    list-style: none; 
+}
+.menu ul li{
+    display: inline;
+    font-weight: bold;
+    padding: 1%;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #e67e22;
+}
+.menu ul li a:hover{
+    color: #d35400;
+}
+.main-content{
+    background-color: lightgray;
+}
+.col{
+    background-color: white;
+    width: 20%;
+    padding: 2%;
+    margin: 1%;
+    float: left;
+}
+.success{
+    color: green;
+}
+.fail{
+    color: red;
+}
+
+/*CSS for footer*/
+
+.footer{
+    background-color: burlywood;
+}
+
+/*CSS for Manade-admin*/
+
+.btn{
+    padding: 1%;
+    background-color: #4b7bec;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: blue;
+}
+.table-adm{
+    background-color: white;
+    border-radius: 10px;
+    width: 130%;
+}
+table tr th{
+    padding: 1%;
+    margin: 1%;
+    border-bottom: 2px solid black;
+}
+table tr td{
+    padding: 1%;
+    text-align: center;
+}
+.btn-primary{
+    text-decoration: none;
+    padding: 1%;
+    background-color: #26de81;
+    font-weight: bold;
+    border-radius: 2px;
+}
+.btn-primary:hover{
+    background-color: #20bf6b;
+}
+.btn-secondary{
+    text-decoration: none;
+    padding: 1%;
+    background-color: #ff7979;
+    font-weight: bold;
+    border-radius: 2px;
+    margin: 0 1%;
+}
+.btn-secondary:hover{
+    background-color: #eb4d4b;
+}
+.btn-thrd{
+    text-decoration: none;
+    padding: 1%;
+    background-color: #4b7bec;
+    font-weight: bold;
+    color: white;
+    border-radius: 2px;
+}
+.btn-thrd:hover{
+    background-color: blue;
+}
+
+/*CSS for adding Admin*/
+.tbl-add-admin{
+    padding: 1%;
+    width: 30%;
+}

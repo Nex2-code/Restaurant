@@ -1,0 +1,217 @@
+/*
+ Aauthor : Adarsh Negi; 
+ Theam : Restaurant;
+ version : 1.0;
+*/
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.border-white{
+    border: 1px solid white;
+}
+.img-resp{
+    width: 100%;
+}
+h2{
+    margin-bottom: 1%;
+}
+h3{
+    font-size: 1.6rem;
+}
+.img-container{
+    position: relative;
+}
+.img-text{
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+}
+.img-curve{
+    border-radius: 5%;
+}
+.text-white{
+    color: white;
+    text-shadow: 1px 1px grey;
+}
+.text-black{
+    color: black;
+}
+.text-search{
+    color: chocolate;
+}
+.success{
+    color: green;
+}
+.fail{
+    color: red;
+}
+
+/*CSS for navigation section */
+
+.logo{
+    width: 15%;
+    float: left; 
+    margin-top: 0%; 
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    display: inline;
+    line-height: 150px;
+    padding: 1%;
+    font-size: 1.3rem;
+}
+a{
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover{
+    color: #d35400;
+}
+.clear {
+    float: none;
+    clear: both;
+}
+
+/*CSS for food search*/
+
+.food-search{
+    background-image: url(../images/searchbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3%;
+    background-size: cover;
+}
+.food-search input[type="search"]{
+    padding: 1%;
+    font-size: 1rem;
+    width: 40%;
+    border-radius: 5px;
+    border: none;
+}
+.btn{
+    padding: 1%;
+    font-size: 1rem;
+    background-color: #e67e22;
+    cursor: pointer;
+    border-radius: 6%;
+    border: none;
+}
+.btn:hover{
+    background-color: #d35400;
+    color: black;
+}
+/*CSS for catergories*/
+.categories{
+    padding: 3px 0;
+}
+.box-3{
+    width: 31%;
+    margin: 10px;
+    float: left;
+}
+
+/*CSS for Exlpore section*/
+.food-menu{
+    padding: 2% 0;
+    background-color: lightgrey;
+}
+.food-box{
+    width: 40%;
+    padding: 1%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+    margin: 2% 3%;
+}
+.food-img{
+    width: 20%;
+    float: left;
+}
+.food-desc{
+    width: 70%;
+    margin-left: 30%;
+    padding: 1% 0;
+}
+.food-price{
+    font-size: 1.5rem;
+    margin: 1% 0;
+}
+.food-det{
+    font-size: 0.9rem;
+}
+.food-head{
+    font-size: 1.3rem;
+}
+
+/*CSS for Social*/
+.social ul{
+    list-style: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+/*CSS for order*/
+.order{
+    background-color: wheat;
+    width: 40%;
+    margin: auto;
+    padding: 2%;
+    border-radius: 10px;
+}
+.food-desc1{
+    width: 70%;
+    margin-left: 15%;
+    padding: 1% 0;
+}
+.food-price1{
+    font-size: 1.5rem;
+    margin: 1% 0;
+}
+
+/*CSS for Mobile view*/
+@media only screen and (max-width:768px){
+    .logo{
+        width: 65%;
+        float: none;
+        margin: 0 auto;
+    }
+    .menu ul li{
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+    .food-search input[type="search"]{
+        width: 98%;
+        margin-bottom: 3%;    
+    }
+    .btn{
+        width: 40%;
+    }
+    .box-3{
+        width: 90%;
+    }
+    .food-box{
+        width: 90%;
+    }
+    .food-img{
+        width: auto;
+    }
+    .social ul{
+        padding: 3%;
+    }
+}
