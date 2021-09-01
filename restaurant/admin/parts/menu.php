@@ -21,7 +21,18 @@
                     <li><a href="manage-category.php">Category</a></li>
                     <li><a href="manage-food.php">Food</a></li>
                     <li><a href="manage-order.php">Order</a></li>
-                    <li><a onclick="return confirm('You will be logout')" href="login.php">Logout</a></li>
+                    <li><a class="cursor" onclick="document.getElementById('out').style.display='block'">Logout</a></li>
+                    <div id="out" class="modal">
+                    <span onclick="document.getElementById('out').style.display='none'" class="close">×</span>
+                    <form class="modal-content" action="login.php">
+                        <div class="container">
+                            <p>Are you sure you want to Logout?</p><br>
+                            <div class="clearfix">
+                                <button type="button" onclick="document.getElementById('out').style.display='none'" class="cancelbtn">Cancel</button>
+                                <button type="submit" class="deletebtn">Logout</button>
+                            </div>
+                        </div>
+                    </form>
                 </ul>
             </div>
         </div>
