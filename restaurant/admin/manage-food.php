@@ -91,8 +91,8 @@
                             </td>
                             <td><?php echo $featured; ?></td>
                             <td><?php echo $active; ?></td>
-                            <td><a class="btn-primary" href="<?php echo SITEURL;?>/admin/update-food.php?id=<?php echo $id?>">Update</a>
-                                <a class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-food.php?id=<?php echo $id;?>&image_name=<?php echo $image_name;?>">Delete</a>
+                            <td><a onclick="return confirm('are you sure you want to Update details?')" class="btn-primary" href="<?php echo SITEURL;?>/admin/update-food.php?id=<?php echo $id?>">Update</a>
+                                <a onclick="return confirm('are you sure you want to delete?')" class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-food.php?id=<?php echo $id;?>&image_name=<?php echo $image_name;?>">Delete</a>
                             </td>
                         </tr>
                         <?php

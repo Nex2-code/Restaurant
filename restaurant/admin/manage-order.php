@@ -60,7 +60,7 @@
                                 <td><?php echo $customer_email; ?></td>
                                 <td><?php echo $customer_address; ?></td>
                                 <td>
-                                    <a class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-order.php?id=<?php echo $id;?>">Delete</a>
+                                    <a onclick="return confirm('are you sure you want to delete?')" class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-order.php?id=<?php echo $id;?>">Delete</a>
                                 </td>
                             </tr>
                             <?php

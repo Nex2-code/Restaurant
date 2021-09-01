@@ -80,9 +80,9 @@
                             <td><?php echo $sn++; ?></td>
                             <td><?php echo $full_name; ?></td>
                             <td><?php echo $username; ?></td>
-                            <td><a class="btn-primary" href="<?php echo SITEURL;?>/admin/update-admin.php?id=<?php echo $id?>">Update</a>
-                                <a class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-admin.php?id=<?php echo $id;?>">Delete</a>
-                                <a class="btn-thrd" href="<?php echo SITEURL;?>/admin/update-password.php?id=<?php echo $id?>">Change Password</a>
+                            <td><a onclick="return confirm('are you sure you want to Update Details?')"class="btn-primary" href="<?php echo SITEURL;?>/admin/update-admin.php?id=<?php echo $id?>">Update</a>
+                                <a onclick="return confirm('are you sure you want to delete?')" class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-admin.php?id=<?php echo $id;?>">Delete</a>
+                                <a onclick="return confirm('are you sure you want to Update Password?')" class="btn-thrd" href="<?php echo SITEURL;?>/admin/update-password.php?id=<?php echo $id?>">Change Password</a>
                             </td>
                         </tr>
                         <?php

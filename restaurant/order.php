@@ -59,7 +59,7 @@
                     <div>Address</div>
                     <textarea name="address" rows="10" placeholder="E.g. Street, City, Country" required></textarea>
                     <br><br>
-                    <input type="submit" name="submit" value="Confirm Order" class="btn">
+                    <input onclick="return confirm('Press ok to confirm your order')" type="submit" name="submit" value="Confirm Order" class="btn">
                     <br><br>
                 </fieldset>
 
@@ -97,12 +97,12 @@
          $res2=mysqli_query($conn,$sql2) or die(mysqli_error($conn));
          if($res2==true)
          {
-             $_SESSION['order']="<div class='success text-center'>Order Successfully placed</div>";
+             $_SESSION['order']="<div class='success text-center'><b>Order Successfully placed</b></div>";
              header("location:".SITEURL.'/index.php');
          }
          else
          {
-             $_SESSION['fail-order']= "<div class='fail text-center'>OrderFail try again</div>";
+             $_SESSION['fail-order']= "<div class='fail text-center'><b>OrderFail try again</b></div>";
              header("location:".SITEURL.'/index.php');
          }
      }

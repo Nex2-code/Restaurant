@@ -38,7 +38,7 @@
                                         <h4 class="food-head"><?php echo $title;?></h4>
                                         <p class="food-price">$<?php echo $price;?></p>
                                         <p class="food-det"><?php echo $description;?></p><br>
-                                        <a class="btn text-black" href="<?php echo SITEURL;?>/order.php?food_id=<?php echo $id;?>">Buy Now</a>> 
+                                        <a class="btn text-black" href="<?php echo SITEURL;?>/order.php?food_id=<?php echo $id;?>">Buy Now</a> 
                                     </div>
                                 </div>
                                 <?php

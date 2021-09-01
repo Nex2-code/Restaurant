@@ -89,8 +89,8 @@
                                 <td><?php echo $featured;?></td>
                                 <td><?php echo $active;?></td>
                                 <td>
-                                    <a class="btn-primary" href="<?php echo SITEURL;?>/admin/update-category.php?id=<?php echo $id?>">Update</a>
-                                    <a class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-category.php?id=<?php echo $id?>&image_name=<?php echo $image_name;?>">Delete</a>
+                                    <a onclick="return confirm('are you sure you want to update details?')" class="btn-primary" href="<?php echo SITEURL;?>/admin/update-category.php?id=<?php echo $id?>">Update</a>
+                                    <a onclick="return confirm('are you sure you want to delete?')" class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-category.php?id=<?php echo $id?>&image_name=<?php echo $image_name;?>">Delete</a>
                                 </td>
                                 </tr>
                                 <?php

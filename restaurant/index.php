@@ -1,5 +1,15 @@
 <?php
-    include("parts-front/head.php");    
+    include("parts-front/head.php");
+    if(isset($_SESSION['order']))
+    {
+        echo $_SESSION['order'];
+        unset($_SESSION['order']);
+    }
+    if(isset($_SESSION['fail-order']))
+    {
+        echo $_SESSION['fail-order'];
+        unset($_SESSION['fail-order']);
+    }   
 ?>
     <!--Food Search section starts here-->
     <section class="food-search text-center">
@@ -52,16 +62,6 @@
     <!--Food Menu section starts here-->
     <section class="food-menu">
         <div class="container">
-            <?php if(isset($_SESSION['order']))
-                {
-                    echo $_SESSION['order'];
-                    unset($_SESSION['order']);
-                }
-                if(isset($_SESSION['fail-order']))
-                {
-                    echo $_SESSION['fail-order'];
-                    unset($_SESSION['fail-order']);
-                }?>
             <h2 class="text-center">Menu</h2><br>
             <?php
                 $sql= "SELECT * FROM tbl_food WHERE active='Yes' LIMIT 6";
