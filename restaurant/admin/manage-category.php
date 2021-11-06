@@ -15,16 +15,6 @@
         echo $_SESSION['fail-img'];
         unset($_SESSION['fail-img']);
     }
-    if(isset($_SESSION['delete']))
-    {
-        echo $_SESSION['delete'];
-        unset($_SESSION['delete']);
-    }
-    if(isset($_SESSION['fail-delete']))
-    {
-        echo $_SESSION['fail-delete'];
-        unset($_SESSION['fail-delete']);
-    }
     if(isset($_SESSION['update']))
     {
         echo $_SESSION['update'];
@@ -47,7 +37,6 @@
                     <th>S.No</td>
                     <th>Title</td>
                     <th>Image Name</th>
-                    <th>Featured</td>
                     <th>Active</td>
                     <th>Actions</th>
                 </tr>
@@ -65,7 +54,6 @@
                                 $id=$row['id'];
                                 $title=$row['title'];
                                 $image_name=$row['image_name'];
-                                $featured=$row['featured'];
                                 $active=$row['active'];
                                 ?>
                                <tr>
@@ -86,11 +74,9 @@
                                         }
                                     ?>
                                 </td>
-                                <td><?php echo $featured;?></td>
                                 <td><?php echo $active;?></td>
                                 <td>
                                     <a onclick="return confirm('are you sure you want to update details?')" class="btn-primary" href="<?php echo SITEURL;?>/admin/update-category.php?id=<?php echo $id?>">Update</a>
-                                    <a onclick="return confirm('are you sure you want to delete?')" class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-category.php?id=<?php echo $id?>&image_name=<?php echo $image_name;?>">Delete</a>
                                 </td>
                                 </tr>
                                 <?php

@@ -39,3 +39,6 @@ a{
     margin: 45%;
     font-size: 1.2rem;
 }
+a:hover{
+    background-color: whitesmoke;
+}

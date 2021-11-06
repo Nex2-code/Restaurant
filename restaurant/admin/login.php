@@ -18,7 +18,17 @@
                 {
                     echo $_SESSION['login-msg'];
                     unset($_SESSION['login-msg']);
-                }  
+                }
+                if(isset($_SESSION['add']))
+                {
+                    echo $_SESSION['add'];
+                    unset($_SESSION['add']);
+                }
+                if(isset($_SESSION['fail-add']))
+                {
+                    echo $_SESSION['fail-add'];
+                    unset($_SESSION['fail-add']);
+                }
             ?><br>
             <br>
             <form class="lg-form" action="" method="POST">
@@ -29,6 +39,8 @@
             <input type="password" name="password"required>
             <br><br>
             <input type="submit" name="submit" value="Login">
+            <br><br>
+            <button onclick="location.href='add-user.php'">Create account</button>
         </form>
         </div>        
     </body>

@@ -10,16 +10,6 @@
         echo $_SESSION['fail-add'];
         unset($_SESSION['fail-add']);
     }
-    if(isset($_SESSION['delete']))
-    {
-        echo $_SESSION['delete'];
-        unset($_SESSION['delete']);
-    }    
-    if(isset($_SESSION['fail-delete']))
-    {
-        echo $_SESSION['fail-delete'];
-        unset($_SESSION['fail-delete']);
-    }
     if(isset($_SESSION['fail-img']))
     {
         echo $_SESSION['fail-img'];
@@ -48,7 +38,6 @@
                     <th>Title</td>
                     <th>Price</th>
                     <th>Image</th>
-                    <th>Featured</th>
                     <th>Active</th>
                     <th>Action</th>
                 </tr>
@@ -68,7 +57,6 @@
                             $title=$row['title'];
                             $price=$row['price'];
                             $image_name=$row['image_name'];
-                            $featured=$row['featured'];
                             $active=$row['active'];
                         ?>
                         <tr>
@@ -89,10 +77,8 @@
                                         }
                                     ?>
                             </td>
-                            <td><?php echo $featured; ?></td>
                             <td><?php echo $active; ?></td>
                             <td><a onclick="return confirm('are you sure you want to Update details?')" class="btn-primary" href="<?php echo SITEURL;?>/admin/update-food.php?id=<?php echo $id?>">Update</a>
-                                <a onclick="return confirm('are you sure you want to delete?')" class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-food.php?id=<?php echo $id;?>&image_name=<?php echo $image_name;?>">Delete</a>
                             </td>
                         </tr>
                         <?php

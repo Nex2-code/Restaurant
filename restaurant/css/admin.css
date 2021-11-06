@@ -8,7 +8,7 @@
     padding: 0 0;
 }
 .wrapper{
-    padding: 2%;
+    padding: 1%;
     margin: 0 4%;
     width: 70%;
 }
@@ -75,7 +75,7 @@
 .table-adm{
     background-color: white;
     border-radius: 10px;
-    width: 130%;
+    width: 125%;
 }
 table tr th{
     padding: 1%;
