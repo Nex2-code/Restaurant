@@ -89,6 +89,8 @@
                     }
                 ?>
             </table>
+            <br>
+            <p><b>In case any problems or To Delete Category contact Admin. Category which remain inactive for more then 8days will be Deleted Automatically. Thanks.</b></p>
         </div>
     </div>
 

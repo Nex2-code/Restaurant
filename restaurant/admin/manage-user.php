@@ -71,6 +71,8 @@
                 }
             ?>
             </table>
+            <br>
+            <p><b>In case any problems or To Delete User contact Admin. Thanks.</b></p>
         </div>
     </div>
 <?php include("parts/footer.php")?>

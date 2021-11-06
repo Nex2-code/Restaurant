@@ -91,6 +91,8 @@
                 }
             ?>
             </table>
+            <br>
+            <p><b>In case any problems or To Delete Food contact Admin. Food which remain inactive for more then 3days will be Deleted Automatically. Thanks.</b></p>
         </div>
     </div>
 <?php include("parts/footer.php")?>
