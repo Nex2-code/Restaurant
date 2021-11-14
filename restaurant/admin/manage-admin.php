@@ -95,6 +95,7 @@
                 }
             ?>
             </table>
+            <br><br><br>
             <table class="table-adm">
                 <tr>
                     <th>S.No</td>
