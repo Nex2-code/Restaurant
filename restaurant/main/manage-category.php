@@ -30,7 +30,7 @@
         <div class="wrapper">
             <strong>MANAGE CATEGORY</strong>
             <br><br><br>
-            <a class="btn" href="<?php echo SITEURL;?>/admin/add-category.php">Add Category</a>
+            <a class="btn" href="<?php echo SITEURL;?>/main/add-category.php">Add Category</a>
             <br><br><br>
             <table class="table-adm">
                 <tr>
@@ -76,8 +76,7 @@
                                 </td>
                                 <td><?php echo $active;?></td>
                                 <td>
-                                    <a onclick="return confirm('are you sure you want to update details?')" class="btn-primary" href="<?php echo SITEURL;?>/admin/update-category.php?id=<?php echo $id?>">Update</a>
-                                    <a onclick="return confirm('are you sure you want to update details?')" class="btn-primary" href="<?php echo SITEURL;?>/admin/delete-category.php?id=<?php echo $id?>">Delete</a>
+                                    <a onclick="return confirm('are you sure you want to update details?')" class="btn-primary" href="<?php echo SITEURL;?>/main/update-category.php?id=<?php echo $id?>">Update</a>
                                 </td>
                                 </tr>
                                 <?php

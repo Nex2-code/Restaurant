@@ -21,7 +21,7 @@
 <!--Footer section starts here-->
     <section class="footer text-center">
         <div class="container">
-            <p>All right reserved. Designed by <a href="#">Adarsh Negi</a></p>
+            <p>All right reserved. Designed by <a href="https://www.linkedin.com/in/adarsh-negi-736217202">Adarsh Negi</a></p>
         </div>
     </section>
 <!--Footer section ends here-->

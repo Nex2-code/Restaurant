@@ -64,24 +64,24 @@
                     if($res1==TRUE)
                     {
                         $_SESSION['pas-update']="<div class='success text-center'>Password updated Successfully</div>";
-                        header('location:'.SITEURL.'/admin/manage-admin.php');
+                        header('location:'.SITEURL.'/main/manage-admin.php');
                     }
                     else
                     {
                         $_SESSION['fail-pas-update']="<div class='fail text-center'>Fail to Update</div>";
-                        header('location:'.SITEURL.'/admin/manage-admin.php');
+                        header('location:'.SITEURL.'/main/manage-admin.php');
                     }
                 }
                 else
                 {
                     $_SESSION['no-match']="<div class='fail text-center'>Password Not match re-try</div>";
-                    header('location:'.SITEURL.'/admin/update-password.php');
+                    header('location:'.SITEURL.'/main/update-password.php');
                 }
             }
             else
             {
                 $_SESSION['no-user']="<div class='fail text-center'>No user Found with match</div>";
-                header('location:'.SITEURL.'/admin/manage-admin.php');   
+                header('location:'.SITEURL.'/main/manage-admin.php');   
             }
         }
     } 

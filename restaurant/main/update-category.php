@@ -96,7 +96,7 @@
                 if($upload==false)
                 {
                     $_SESSION['fail-img']="<div class='fail text-center'>Fail to upload image</div>";
-                    header('location:'.SITEURL.'/admin/manage-category.php');
+                    header('location:'.SITEURL.'/main/manage-category.php');
                     die();
                 }
                 if($current_image!="")
@@ -106,7 +106,7 @@
                     if($remove==false)
                     {
                         $_SESSION['f-img']="<div class='Fail text-center'>Fail to remove image</div>";
-                        header('location:'.SITEURL.'/admin/manage-category.php');
+                        header('location:'.SITEURL.'/main/manage-category.php');
                     }
                 }
             }
@@ -131,12 +131,12 @@
             if($res1==true)
             {
                 $_SESSION['update']="<div class='success text-center'>Image Updated</div>";
-                header('location:'.SITEURL.'/admin/manage-category.php');
+                header('location:'.SITEURL.'/main/manage-category.php');
             }
             else
             {
                 $_SESSION['fail-update']="<div class='fail text-center'>image Updated</div>";
-                header('location:'.SITEURL.'/admin/manage-category.php');   
+                header('location:'.SITEURL.'/main/manage-category.php');   
             }
 
     }

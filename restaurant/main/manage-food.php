@@ -78,8 +78,7 @@
                                     ?>
                             </td>
                             <td><?php echo $active; ?></td>
-                            <td><a onclick="return confirm('are you sure you want to Update details?')" class="btn-primary" href="<?php echo SITEURL;?>/admin/update-food.php?id=<?php echo $id?>">Update</a>
-                                <a onclick="return confirm('are you sure you want to update details?')" class="btn-primary" href="<?php echo SITEURL;?>/admin/delete-food.php?id=<?php echo $id?>">Delete</a>
+                            <td><a onclick="return confirm('are you sure you want to Update details?')" class="btn-primary" href="<?php echo SITEURL;?>/main/update-food.php?id=<?php echo $id?>">Update</a>
                             </td>
                         </tr>
                         <?php

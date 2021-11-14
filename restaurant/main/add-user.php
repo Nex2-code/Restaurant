@@ -44,12 +44,12 @@
         if($res==TRUE)
         {
             $_SESSION['add']="<div class='success text-center'>User created Successfully</div>";
-            header("location:".SITEURL.'/admin/manage-admin.php');
+            header("location:".SITEURL.'/main/login.php');
         }
         else
         {
             $_SESSION['fail-add']= "<div class='fail text-center'>Fail to create user</div>";
-            header("location:".SITEURL.'/admin/manage-admin.php');
+            header("location:".SITEURL.'/main/login.php');
         }
     }
 ?>

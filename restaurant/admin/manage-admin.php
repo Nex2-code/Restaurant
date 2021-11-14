@@ -51,7 +51,7 @@
         <div class="wrapper">
             <strong>MANAGE CATEGORY</strong>
             <br><br><br>
-            <a class="btn" href="add-admin.php">Add Admin</a>
+            <a class="btn" href="add-admin.php">Add Admin</a>&nbsp<a class="btn" href="../admin/add-user.php">Add User</a>
             <br><br><br>
             <table class="table-adm">
                 <tr>
@@ -59,6 +59,47 @@
                     <th>Full Name</td>
                     <th>username</th>
                     <th>Actions</th>
+                </tr>
+            <?php
+                $sql="SELECT * FROM tbl_user";
+                $res=mysqli_query($conn,$sql);
+                $sn=1;
+                if($res==TRUE)
+                {
+                    $count=mysqli_num_rows($res);
+                    
+                    if($count>0)
+                    {
+                        while($row=mysqli_fetch_assoc($res))
+                        {
+                            $id=$row['id'];
+                            $full_name=$row['full_name'];
+                            $username=$row['username'];
+                        ?>
+                        <tr>
+                            <td><?php echo $sn++; ?></td>
+                            <td><?php echo $full_name; ?></td>
+                            <td><?php echo $username; ?></td>
+                            <td><a onclick="return confirm('are you sure you want to Update Details?')"class="btn-primary" href="<?php echo SITEURL;?>/admin/update-user.php?id=<?php echo $id?>">Update</a>
+                                <a onclick="return confirm('are you sure you want to delete?')" class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-user.php?id=<?php echo $id;?>">Delete</a>
+                                <a onclick="return confirm('are you sure you want to Update Password?')" class="btn-thrd" href="<?php echo SITEURL;?>/admin/update-password.php?id=<?php echo $id?>">Change Password</a>
+                            </td>
+                        </tr>
+                        <?php
+                        }
+                    }
+                    else
+                    {
+                        echo "<div class='fail text-center'>No Admin Available</div>";
+                    }
+                }
+            ?>
+            </table>
+            <table class="table-adm">
+                <tr>
+                    <th>S.No</td>
+                    <th>Full Name</td>
+                    <th>username</th>
                 </tr>
             <?php
                 $sql="SELECT * FROM tbl_admin";
@@ -80,10 +121,6 @@
                             <td><?php echo $sn++; ?></td>
                             <td><?php echo $full_name; ?></td>
                             <td><?php echo $username; ?></td>
-                            <td><a onclick="return confirm('are you sure you want to Update Details?')"class="btn-primary" href="<?php echo SITEURL;?>/admin/update-admin.php?id=<?php echo $id?>">Update</a>
-                                <a onclick="return confirm('are you sure you want to delete?')" class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-admin.php?id=<?php echo $id;?>">Delete</a>
-                                <a onclick="return confirm('are you sure you want to Update Password?')" class="btn-thrd" href="<?php echo SITEURL;?>/admin/update-password.php?id=<?php echo $id?>">Change Password</a>
-                            </td>
                         </tr>
                         <?php
                         }

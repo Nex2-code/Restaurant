@@ -99,7 +99,7 @@
             if($upload==false)
             {
                 $_SESSION['fail-img']="<div class='fail text-center'>Fail to upload image Add Image</div>";
-                header('location:'.SITEURL.'/admin/manage-food.php');
+                header('location:'.SITEURL.'/main/manage-food.php');
                 die();
             }
             
@@ -122,12 +122,12 @@
         if($res1==TRUE)
         {
             $_SESSION['add']="<div class='success text-center'>food Added Successfully</div>";
-            header("location:".SITEURL.'/admin/manage-food.php');
+            header("location:".SITEURL.'/main/manage-food.php');
         }
         else
         {
             $_SESSION['fail-add']= "<div class='fail text-center'>food Fail to Add</div>";
-            header("location:".SITEURL.'/admin/manage-food.php');
+            header("location:".SITEURL.'/main/manage-food.php');
         }
     }
 ?>

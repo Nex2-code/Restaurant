@@ -54,7 +54,7 @@
             if($upload==false)
             {
                 $_SESSION['fail-img']="<div class='success text-center'>Fail to upload image Add Image</div>";
-                header('location:'.SITEURL.'/admin/manage-category.php');
+                header('location:'.SITEURL.'/main/manage-category.php');
                 die();
             }
             
@@ -73,12 +73,12 @@
         if($res==TRUE)
         {
             $_SESSION['add']="<div class='success text-center'>Successfully Added Category</div>";
-            header('location:'.SITEURL.'/admin/manage-category.php');
+            header('location:'.SITEURL.'/main/manage-category.php');
         }
         else
         {
             $_SESSION['fail-add']="<div class='fail text-center'>Fail to add Category</div>";
-            header('location:'.SITEURL.'/admin/manage-category.php');
+            header('location:'.SITEURL.'/main/manage-category.php');
         }
     }
 ?>
