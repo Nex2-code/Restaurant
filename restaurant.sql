@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 14, 2021 at 09:53 AM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 23, 2021 at 10:38 AM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -102,7 +102,7 @@ CREATE TABLE `tbl_order` (
   `price` decimal(10,2) NOT NULL,
   `qty` int(11) NOT NULL,
   `total` decimal(10,2) NOT NULL,
-  `order_date` datetime NOT NULL,
+  `order_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `status` varchar(50) NOT NULL,
   `customer_name` varchar(150) NOT NULL,
   `customer_contact` varchar(20) NOT NULL,
@@ -115,7 +115,8 @@ CREATE TABLE `tbl_order` (
 --
 
 INSERT INTO `tbl_order` (`id`, `food`, `price`, `qty`, `total`, `order_date`, `status`, `customer_name`, `customer_contact`, `customer_email`, `customer_address`) VALUES
-(3, 'Grilled Sandwich', '5.00', 10, '50.00', '2021-08-23 07:32:56', 'ordered', 'adarkh', '1234587963', 'asdasd@gmail.com', 'asdasf');
+(3, 'Grilled Sandwich', '5.00', 10, '50.00', '2021-08-23 02:02:56', 'ordered', 'adarkh', '1234587963', 'asdasd@gmail.com', 'asdasf'),
+(4, 'Chicken taco ', '4.00', 1, '4.00', '2021-11-23 09:36:08', 'ordered', 'ada', '1231', 'asdas@gmail.com', 'daewqe');
 
 -- --------------------------------------------------------
 
@@ -197,7 +198,7 @@ ALTER TABLE `tbl_food`
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
