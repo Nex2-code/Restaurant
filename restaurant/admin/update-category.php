@@ -17,7 +17,6 @@
                                     $row=mysqli_fetch_assoc($res);
                                     $title=$row['title'];
                                     $current_image=$row['image_name'];
-                                    $featured=$row['featured'];
                                     $active=$row['active'];
 
                                 }
@@ -78,7 +77,6 @@
         $id=mysqli_real_escape_string($conn,$_POST['id']);
         $title=mysqli_real_escape_string($conn,$_POST['title']);
         $current_image=$_POST['current_image'];
-        $featured=$_POST['featured'];
         $active=$_POST['active'];
 
         if(isset($_FILES['image']['name']))
@@ -123,7 +121,6 @@
 
         $sql1="UPDATE tbl_category SET
                 title='$title',
-                featured='$featured',
                 active='$active',
                 image_name='$image_name' 
                 WHERE id=$id";

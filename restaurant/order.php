@@ -75,7 +75,7 @@
          $price=mysqli_real_escape_string($conn,$_POST['price']);
          $qty=mysqli_real_escape_string($conn,$_POST['qty']);
          $total=$qty*$price;
-         $status="ordered";
+         $status="Pending";
          $customer_name=mysqli_real_escape_string($conn,$_POST['full-name']);
          $customer_contact=mysqli_real_escape_string($conn,$_POST['contact']);
          $customer_email=mysqli_real_escape_string($conn,$_POST['email']);

@@ -17,7 +17,6 @@
                                     $row=mysqli_fetch_assoc($res);
                                     $title=$row['title'];
                                     $current_image=$row['image_name'];
-                                    $featured=$row['featured'];
                                     $active=$row['active'];
                                     $description=$row['description'];
                                     $price=$row['price'];
@@ -122,7 +121,6 @@
         $id=mysqli_real_escape_string($conn,$_POST['id']);
         $title=mysqli_real_escape_string($conn,$_POST['title']);
         $current_image=$_POST['current_image'];
-        $featured=$_POST['featured'];
         $active=$_POST['active'];
         $price=$_POST['price'];
         $description=$_POST['description'];
@@ -170,7 +168,6 @@
 
         $sql1="UPDATE tbl_food SET
                 title='$title',
-                featured='$featured',
                 active='$active',
                 image_name='$image_name',
                 price=$price,

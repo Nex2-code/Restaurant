@@ -11,6 +11,17 @@
         echo $_SESSION['fail-delete'];
         unset($_SESSION['fail-delete']);
     }
+    if(isset($_SESSION['update']))
+    {
+        echo $_SESSION['update'];
+        unset($_SESSION['update']);
+
+    }
+    if(isset($_SESSION['fail-update']))
+    {
+        echo $_SESSION['fail-update'];
+        unset($_SESSION['fail-update']);
+    }
 ?>              
     <div class="main-content">
         <div class="wrapper">
@@ -26,6 +37,7 @@
                         <th>Customer Contact</th>
                         <th>Customer Email</th>
                         <th>Customer Address</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                     
@@ -49,6 +61,7 @@
                                 $customer_contact=$row['customer_contact'];
                                 $customer_email=$row['customer_email'];
                                 $customer_address=$row['customer_address'];
+                                $status=$row['status'];
                             ?>
                             <tr>
                                 <td><?php echo $sn++; ?></td>
@@ -59,7 +72,9 @@
                                 <td><?php echo $customer_contact; ?></td>
                                 <td><?php echo $customer_email; ?></td>
                                 <td><?php echo $customer_address; ?></td>
+                                <td><?php echo $status;?></td>
                                 <td>
+                                    <a onclick="return confirm('are you sure you want to Update?')" class="btn-primary" href="<?php echo SITEURL;?>/main/update-order.php?id=<?php echo $id;?>">Update</a>
                                     <a onclick="return confirm('are you sure you want to delete?')" class="btn-secondary" href="<?php echo SITEURL;?>/admin/delete-order.php?id=<?php echo $id;?>">Delete</a>
                                 </td>
                             </tr>

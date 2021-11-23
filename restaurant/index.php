@@ -26,7 +26,7 @@
         <div class="container">
             <h2 class="text-center">Categories</h2>
              <?php
-                $sql= "SELECT * FROM tbl_category WHERE active='Yes' AND featured='Yes' LIMIT 3";
+                $sql= "SELECT * FROM tbl_category WHERE active='Yes' LIMIT 3";
                 $res=mysqli_query($conn,$sql);
                 if($res==true)
                 {
